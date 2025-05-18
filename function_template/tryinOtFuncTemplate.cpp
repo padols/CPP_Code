@@ -26,6 +26,8 @@ int main()
     string f{"world"};
     
     cout<<"string maxium::  "<<maximum(e,f)<<endl;
+
+     cout<<"max in int and double  :: "<<maximum<double>(a,d)<<endl;
     
     return 0;
 }
