@@ -8,7 +8,11 @@ T maximum(T a, T b)
 {
     return (a>b)?a:b;
 }
-
+template <>
+const char* maximum<const char*>(const char* a,const char* b)
+{
+    return (strcmp(a,b) == 0?a:b);
+}
 int main()
 {
     int a{5};
@@ -27,7 +31,10 @@ int main()
     
     cout<<"string maxium::  "<<maximum(e,f)<<endl;
 
-     cout<<"max in int and double  :: "<<maximum<double>(a,d)<<endl;
+    cout<<"max in int and double  :: "<<maximum<double>(a,d)<<endl;
+
+    const char *result =  maximum<const char*>(e,f);
+    cout<<"string maxium::  "<<result<<endl;
     
     return 0;
 }
